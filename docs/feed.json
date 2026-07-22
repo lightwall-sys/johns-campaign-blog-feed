@@ -4,8 +4,8 @@
     "name": "John's Campaign",
     "blog_url": "https://johnscampaign.org.uk/blog/"
   },
-  "generated_at": "2026-07-22T03:10:29Z",
-  "last_successful_update": "2026-07-22T03:10:29Z",
+  "generated_at": "2026-07-22T03:35:50Z",
+  "last_successful_update": "2026-07-22T03:35:50Z",
   "post_count": 6,
   "posts": [
     {
@@ -13,7 +13,7 @@
       "url": "https://johnscampaign.org.uk/post/forced-into-a-care-home/",
       "author": "Sarah Rose",
       "date": "2026-07-19",
-      "excerpt": "This post first appeared on the blog of the Pathfinders Neuromuscular Alliance â in it, Sarah Rose, their Chair of Trustees, writes about the importance of independent living and support from carers, and her fear that this could be taken away from her and others with complex disabilities:",
+      "excerpt": "This post first appeared on the blog of the Pathfinders Neuromuscular Alliance — in it, Sarah Rose, their Chair of Trustees, writes about the importance of independent living and support from carers, and her fear that this could be taken away from her and others with complex disabilities:",
       "image": {
         "url": "https://johnscampaign.org.uk/images/posts/sarah-rose-2.jpg",
         "alt": "Sarah Rose",
@@ -23,7 +23,63 @@
       "tags": []
     },
     {
-      "title": "âIf You Canât Help Your Own, Who Can You Helpâ",
+      "title": "Hearing Patient and Carer Voices, Part 1 — From Visiting to Presence: Why “Partners in Care” Must Be the Future",
+      "url": "https://johnscampaign.org.uk/post/hearing-patient-and-carer-voices-1/",
+      "author": "Garry Perry",
+      "date": "2026-06-16",
+      "excerpt": "(This is part of our Hearing Patient and Carer Voices series from Royal Wolverhampton NHS Trust and Walsall Healthcare NHS Trust.) Garry Perry is a leading voice in patient experience and co-design across The Royal Wolverhampton NHS Trust and Walsall Healthcare NHS Trust. Creator of the award-winning Little Voices programme, he champions approaches that put lived experience at the heart of improvement, shaping work…",
+      "image": {
+        "url": "https://johnscampaign.org.uk/images/posts/garry-perry.jpg",
+        "alt": "Garry Perry",
+        "width": 1024,
+        "height": 1536
+      },
+      "tags": []
+    },
+    {
+      "title": "Hearing Patient and Carer Voices, Part 2 — Recognising Carers: Making “Partners in Care” Real Every Day",
+      "url": "https://johnscampaign.org.uk/post/hearing-patient-and-carer-voices-2/",
+      "author": "Zoe Christoffersen",
+      "date": "2026-06-16",
+      "excerpt": "(This is part of our Hearing Patient and Carer Voices series from Royal Wolverhampton NHS Trust and Walsall Healthcare NHS Trust.) Zoe Christoffersen is a Family & Carers’ Support Officer at Walsall Healthcare NHS Trust.",
+      "image": {
+        "url": "https://johnscampaign.org.uk/images/posts/zoe-christoffersen.png",
+        "alt": "Zoe Christoffersen",
+        "width": 946,
+        "height": 1368
+      },
+      "tags": []
+    },
+    {
+      "title": "Hearing Patient and Carer Voices, Part 3",
+      "url": "https://johnscampaign.org.uk/post/hearing-patient-and-carer-voices-3/",
+      "author": "Andrew Rice",
+      "date": "2026-06-16",
+      "excerpt": "(This is part of our Hearing Patient and Carer Voices series from Royal Wolverhampton NHS Trust and Walsall Healthcare NHS Trust.) Andrew Rice is Head of Patient Voice across Walsall Healthcare NHS Trust and The Royal Wolverhampton NHS Trust. His work focuses on ensuring that patients, families, and carers are not only heard, but actively shape how care is delivered and improved. He is a strong advocate for…",
+      "image": {
+        "url": "https://johnscampaign.org.uk/images/posts/andrew-rice.png",
+        "alt": "Andrew Rice",
+        "width": 348,
+        "height": 348
+      },
+      "tags": []
+    },
+    {
+      "title": "Hearing Patient and Carer Voices",
+      "url": "https://johnscampaign.org.uk/post/hearing-patient-and-carer-voices/",
+      "author": "Royal Wolverhampton NHS Trust and Walsall Healthcare NHS Trust",
+      "date": "2026-06-16",
+      "excerpt": "The Royal Wolverhampton NHS Trust and Walsall Healthcare NHS Trust are making great progress developing the Partners-in-Care ethos as well as refreshing their John's Campaign pledges (see video) . Here they present a three-part series of pieces giving 'what's, 'why's and 'how's about the changes they're making:",
+      "image": {
+        "url": "https://johnscampaign.org.uk/images/posts/royal-wolverhampton-and-walsall-nhs-trusts.png",
+        "alt": "Royal Wolverhampton NHS Trust and Walsall Healthcare NHS Trust",
+        "width": 482,
+        "height": 300
+      },
+      "tags": []
+    },
+    {
+      "title": "“If You Can’t Help Your Own, Who Can You Help”",
       "url": "https://johnscampaign.org.uk/post/if-you-cant-help-your-own-who-can-you-help/",
       "author": "Jessica Hayes",
       "date": "2026-06-10",
@@ -33,62 +89,6 @@
         "alt": "Jessica Hayes",
         "width": 428,
         "height": 444
-      },
-      "tags": []
-    },
-    {
-      "title": "Must People With Dementia Be Defined by Their Diagnosis?",
-      "url": "https://johnscampaign.org.uk/post/must-people-with-dementia-be-defined-by-their-diagnosis/",
-      "author": "Julia Jones",
-      "date": "2026-06-09",
-      "excerpt": "Media coverage of Jon Snow's Alzheimer's diagnosis recently prompted Julia Jones to consider why so often people can seem to become defined by a diagnosis of dementia:",
-      "image": {
-        "url": "https://johnscampaign.org.uk/images/posts/jon-snow.jpg",
-        "alt": "Julia Jones",
-        "width": 960,
-        "height": 1355
-      },
-      "tags": []
-    },
-    {
-      "title": "Dementia Action Week",
-      "url": "https://johnscampaign.org.uk/post/dementia-action-week/",
-      "author": "Julie Allen",
-      "date": "2026-05-22",
-      "excerpt": "John's Campaign ambassador, Julie Allen, describes some of the activities she and her team have undertaken during Dementia Action Week:",
-      "image": {
-        "url": "https://johnscampaign.org.uk/images/posts/julie-allen.png",
-        "alt": "Julie Allen",
-        "width": 252,
-        "height": 378
-      },
-      "tags": []
-    },
-    {
-      "title": "Keeping Hands Busy",
-      "url": "https://johnscampaign.org.uk/post/keeping-hands-busy/",
-      "author": "John's Campaign",
-      "date": "2026-05-14",
-      "excerpt": "For the right to stay with people with dementia, and the right of people with dementia to be supported by their family carers.",
-      "image": {
-        "url": "https://johnscampaign.org.uk/images/posts/the-cat-and-wool-crochet-octopus.jpg",
-        "alt": "John's Campaign",
-        "width": 832,
-        "height": 694
-      },
-      "tags": []
-    },
-    {
-      "title": "From Tragedy to a National Movement",
-      "url": "https://johnscampaign.org.uk/post/from-tragedy-to-a-national-movement/",
-      "author": "John's Campaign",
-      "date": "2026-05-14",
-      "excerpt": "For the right to stay with people with dementia, and the right of people with dementia to be supported by their family carers.",
-      "image": {
-        "url": "https://johnscampaign.org.uk/images/posts/from-tragedy-to-a-national-movement.png",
-        "alt": "John's Campaign",
-        "width": 1200,
-        "height": 1200
       },
       "tags": []
     }
