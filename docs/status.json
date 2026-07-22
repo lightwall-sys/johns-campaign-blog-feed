@@ -1,13 +1,13 @@
 {
   "ok": true,
   "stale": false,
-  "checked_at": "2026-07-22T03:10:29Z",
-  "last_successful_update": "2026-07-22T03:10:29Z",
+  "checked_at": "2026-07-22T06:29:39Z",
+  "last_successful_update": "2026-07-22T06:29:39Z",
   "post_count": 6,
   "methods": [
     "article-page",
     "blog-listing",
     "declared-feed"
   ],
-  "message": "Validated seed data. Run the workflow to refresh from the source."
+  "message": "Feed updated successfully."
 }
