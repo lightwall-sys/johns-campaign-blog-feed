@@ -4,8 +4,8 @@
     "name": "John's Campaign",
     "blog_url": "https://johnscampaign.org.uk/blog/"
   },
-  "generated_at": "2026-07-22T03:35:50Z",
-  "last_successful_update": "2026-07-22T03:35:50Z",
+  "generated_at": "2026-07-22T03:10:29Z",
+  "last_successful_update": "2026-07-22T03:10:29Z",
   "post_count": 6,
   "posts": [
     {
@@ -27,12 +27,12 @@
       "url": "https://johnscampaign.org.uk/post/hearing-patient-and-carer-voices-1/",
       "author": "Garry Perry",
       "date": "2026-06-16",
-      "excerpt": "(This is part of our Hearing Patient and Carer Voices series from Royal Wolverhampton NHS Trust and Walsall Healthcare NHS Trust.) Garry Perry is a leading voice in patient experience and co-design across The Royal Wolverhampton NHS Trust and Walsall Healthcare NHS Trust. Creator of the award-winning Little Voices programme, he champions approaches that put lived experience at the heart of improvement, shaping work…",
+      "excerpt": "Garry Perry is a leading voice in patient experience and co-design across The Royal Wolverhampton NHS Trust and Walsall Healthcare NHS Trust. Creator of the award-winning Little Voices programme, he champions approaches that put lived experience at the heart of improvement.",
       "image": {
         "url": "https://johnscampaign.org.uk/images/posts/garry-perry.jpg",
         "alt": "Garry Perry",
-        "width": 1024,
-        "height": 1536
+        "width": null,
+        "height": null
       },
       "tags": []
     },
@@ -41,12 +41,12 @@
       "url": "https://johnscampaign.org.uk/post/hearing-patient-and-carer-voices-2/",
       "author": "Zoe Christoffersen",
       "date": "2026-06-16",
-      "excerpt": "(This is part of our Hearing Patient and Carer Voices series from Royal Wolverhampton NHS Trust and Walsall Healthcare NHS Trust.) Zoe Christoffersen is a Family & Carers’ Support Officer at Walsall Healthcare NHS Trust.",
+      "excerpt": "Zoe Christoffersen is a Family & Carers’ Support Officer at Walsall Healthcare NHS Trust.",
       "image": {
         "url": "https://johnscampaign.org.uk/images/posts/zoe-christoffersen.png",
         "alt": "Zoe Christoffersen",
-        "width": 946,
-        "height": 1368
+        "width": null,
+        "height": null
       },
       "tags": []
     },
@@ -55,12 +55,12 @@
       "url": "https://johnscampaign.org.uk/post/hearing-patient-and-carer-voices-3/",
       "author": "Andrew Rice",
       "date": "2026-06-16",
-      "excerpt": "(This is part of our Hearing Patient and Carer Voices series from Royal Wolverhampton NHS Trust and Walsall Healthcare NHS Trust.) Andrew Rice is Head of Patient Voice across Walsall Healthcare NHS Trust and The Royal Wolverhampton NHS Trust. His work focuses on ensuring that patients, families, and carers are not only heard, but actively shape how care is delivered and improved. He is a strong advocate for…",
+      "excerpt": "Andrew Rice is Head of Patient Voice across Walsall Healthcare NHS Trust and The Royal Wolverhampton NHS Trust. His work focuses on ensuring that patients, families and carers actively shape how care is delivered and improved.",
       "image": {
         "url": "https://johnscampaign.org.uk/images/posts/andrew-rice.png",
         "alt": "Andrew Rice",
-        "width": 348,
-        "height": 348
+        "width": null,
+        "height": null
       },
       "tags": []
     },
@@ -69,12 +69,12 @@
       "url": "https://johnscampaign.org.uk/post/hearing-patient-and-carer-voices/",
       "author": "Royal Wolverhampton NHS Trust and Walsall Healthcare NHS Trust",
       "date": "2026-06-16",
-      "excerpt": "The Royal Wolverhampton NHS Trust and Walsall Healthcare NHS Trust are making great progress developing the Partners-in-Care ethos as well as refreshing their John's Campaign pledges (see video) . Here they present a three-part series of pieces giving 'what's, 'why's and 'how's about the changes they're making:",
+      "excerpt": "The Royal Wolverhampton NHS Trust and Walsall Healthcare NHS Trust are developing the Partners-in-Care ethos and refreshing their John's Campaign pledges. Here they present a three-part series about the changes they are making.",
       "image": {
         "url": "https://johnscampaign.org.uk/images/posts/royal-wolverhampton-and-walsall-nhs-trusts.png",
         "alt": "Royal Wolverhampton NHS Trust and Walsall Healthcare NHS Trust",
-        "width": 482,
-        "height": 300
+        "width": null,
+        "height": null
       },
       "tags": []
     },
@@ -83,7 +83,7 @@
       "url": "https://johnscampaign.org.uk/post/if-you-cant-help-your-own-who-can-you-help/",
       "author": "Jessica Hayes",
       "date": "2026-06-10",
-      "excerpt": "Jessica Hayes is a student occupational therapist at Teesside University. She discovered John's Campaign while supporting her beloved Nana in the last days of her life. Jessica recently became a John's Campaign ambassador. Here she tells us about her Nana, and why the campaign matters to her:",
+      "excerpt": "Jessica Hayes is a student occupational therapist at Teesside University. She discovered John's Campaign while supporting her beloved Nana in the last days of her life. Jessica recently became a John's Campaign ambassador.",
       "image": {
         "url": "https://johnscampaign.org.uk/images/posts/lillian-burton.png",
         "alt": "Jessica Hayes",

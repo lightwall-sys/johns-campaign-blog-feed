@@ -31,7 +31,7 @@ MAX_POSTS = 6
 MIN_POSTS = 3
 HTTP_TIMEOUT = 25
 MAX_IMAGE_BYTES = 8 * 1024 * 1024
-USER_AGENT = "JohnsCampaignFeedMirror/1.1"
+USER_AGENT = "JohnsCampaignFeedMirror/1.2"
 
 POST_PATH_RE = re.compile(r"^/post/[^/?#]+/?$", re.I)
 DATE_LINE_RE = re.compile(
