@@ -4,16 +4,16 @@
     "name": "John's Campaign",
     "blog_url": "https://johnscampaign.org.uk/blog/"
   },
-  "generated_at": "2026-07-21T09:00:14+01:00",
-  "last_successful_update": "2026-07-21T09:00:14+01:00",
-  "post_count": 3,
+  "generated_at": "2026-07-22T03:10:29Z",
+  "last_successful_update": "2026-07-22T03:10:29Z",
+  "post_count": 6,
   "posts": [
     {
       "title": "Forced into a Care Home: This Could Have Been Me",
       "url": "https://johnscampaign.org.uk/post/forced-into-a-care-home/",
       "author": "Sarah Rose",
       "date": "2026-07-19",
-      "excerpt": "Sarah Rose writes about independent living, support from carers and her fear that both could be taken away from people with complex disabilities.",
+      "excerpt": "This post first appeared on the blog of the Pathfinders Neuromuscular Alliance â in it, Sarah Rose, their Chair of Trustees, writes about the importance of independent living and support from carers, and her fear that this could be taken away from her and others with complex disabilities:",
       "image": {
         "url": "https://johnscampaign.org.uk/images/posts/sarah-rose-2.jpg",
         "alt": "Sarah Rose",
@@ -23,30 +23,72 @@
       "tags": []
     },
     {
-      "title": "Hearing Patient and Carer Voices, Part 1 — From Visiting to Presence: Why ‘Partners in Care’ Must Be the Future",
-      "url": "https://johnscampaign.org.uk/post/hearing-patient-and-carer-voices-1/",
-      "author": "Garry Perry",
-      "date": "2026-06-16",
-      "excerpt": "Garry Perry describes why lived experience and co-design should shape care across the Royal Wolverhampton and Walsall NHS trusts.",
+      "title": "âIf You Canât Help Your Own, Who Can You Helpâ",
+      "url": "https://johnscampaign.org.uk/post/if-you-cant-help-your-own-who-can-you-help/",
+      "author": "Jessica Hayes",
+      "date": "2026-06-10",
+      "excerpt": "Jessica Hayes is a student occupational therapist at Teesside University. She discovered John's Campaign while supporting her beloved Nana in the last days of her life. Jessica recently became a John's Campaign ambassador. Here she tells us about her Nana, and why the campaign matters to her:",
       "image": {
-        "url": "https://johnscampaign.org.uk/images/posts/garry-perry.jpg",
-        "alt": "Garry Perry",
-        "width": 1024,
-        "height": 1536
+        "url": "https://johnscampaign.org.uk/images/posts/lillian-burton.png",
+        "alt": "Jessica Hayes",
+        "width": 428,
+        "height": 444
       },
       "tags": []
     },
     {
-      "title": "Hearing Patient and Carer Voices, Part 2 — Recognising Carers: Making ‘Partners in Care’ Real Every Day",
-      "url": "https://johnscampaign.org.uk/post/hearing-patient-and-carer-voices-2/",
-      "author": "Zoe Christoffersen",
-      "date": "2026-06-16",
-      "excerpt": "Zoe Christoffersen explains how recognising carers as partners can become part of everyday practice.",
+      "title": "Must People With Dementia Be Defined by Their Diagnosis?",
+      "url": "https://johnscampaign.org.uk/post/must-people-with-dementia-be-defined-by-their-diagnosis/",
+      "author": "Julia Jones",
+      "date": "2026-06-09",
+      "excerpt": "Media coverage of Jon Snow's Alzheimer's diagnosis recently prompted Julia Jones to consider why so often people can seem to become defined by a diagnosis of dementia:",
       "image": {
-        "url": "https://johnscampaign.org.uk/images/posts/zoe-christoffersen.png",
-        "alt": "Zoe Christoffersen",
-        "width": 946,
-        "height": 1368
+        "url": "https://johnscampaign.org.uk/images/posts/jon-snow.jpg",
+        "alt": "Julia Jones",
+        "width": 960,
+        "height": 1355
+      },
+      "tags": []
+    },
+    {
+      "title": "Dementia Action Week",
+      "url": "https://johnscampaign.org.uk/post/dementia-action-week/",
+      "author": "Julie Allen",
+      "date": "2026-05-22",
+      "excerpt": "John's Campaign ambassador, Julie Allen, describes some of the activities she and her team have undertaken during Dementia Action Week:",
+      "image": {
+        "url": "https://johnscampaign.org.uk/images/posts/julie-allen.png",
+        "alt": "Julie Allen",
+        "width": 252,
+        "height": 378
+      },
+      "tags": []
+    },
+    {
+      "title": "Keeping Hands Busy",
+      "url": "https://johnscampaign.org.uk/post/keeping-hands-busy/",
+      "author": "John's Campaign",
+      "date": "2026-05-14",
+      "excerpt": "For the right to stay with people with dementia, and the right of people with dementia to be supported by their family carers.",
+      "image": {
+        "url": "https://johnscampaign.org.uk/images/posts/the-cat-and-wool-crochet-octopus.jpg",
+        "alt": "John's Campaign",
+        "width": 832,
+        "height": 694
+      },
+      "tags": []
+    },
+    {
+      "title": "From Tragedy to a National Movement",
+      "url": "https://johnscampaign.org.uk/post/from-tragedy-to-a-national-movement/",
+      "author": "John's Campaign",
+      "date": "2026-05-14",
+      "excerpt": "For the right to stay with people with dementia, and the right of people with dementia to be supported by their family carers.",
+      "image": {
+        "url": "https://johnscampaign.org.uk/images/posts/from-tragedy-to-a-national-movement.png",
+        "alt": "John's Campaign",
+        "width": 1200,
+        "height": 1200
       },
       "tags": []
     }
