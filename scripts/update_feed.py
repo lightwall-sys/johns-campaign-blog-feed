@@ -17,7 +17,7 @@ from typing import Any, Iterable
 from urllib.parse import urljoin, urlparse, urlunparse
 
 import requests
-from bs4 import BeautifulSoup, Tag
+from bs4 import BeautifulSoup, Tag, UnicodeDammit
 from dateutil import parser as date_parser
 from PIL import Image
 
@@ -31,7 +31,7 @@ MAX_POSTS = 6
 MIN_POSTS = 3
 HTTP_TIMEOUT = 25
 MAX_IMAGE_BYTES = 8 * 1024 * 1024
-USER_AGENT = "JohnsCampaignFeedMirror/1.0"
+USER_AGENT = "JohnsCampaignFeedMirror/1.1"
 
 POST_PATH_RE = re.compile(r"^/post/[^/?#]+/?$", re.I)
 DATE_LINE_RE = re.compile(
@@ -46,6 +46,7 @@ GENERIC_IMAGE_RE = re.compile(
     re.I,
 )
 BAD_TITLE_RE = re.compile(r"^(read more|blog|john'?s campaign|home|previous|next)$", re.I)
+MOJIBAKE_RE = re.compile(r"(?:[\u0080-\u009f]|â[\u0080-\u00bf]|Â[\u0080-\u00bf]|Ã[\u0080-\u00bf]|ï¿½|\ufffd)")
 
 
 @dataclass
@@ -81,7 +82,9 @@ class Post:
         for attr in ("title", "author", "date", "excerpt"):
             current = getattr(self, attr)
             incoming = getattr(other, attr)
-            if incoming and (not current or len(incoming) > len(current)):
+            if not incoming or contains_mojibake(incoming):
+                continue
+            if not current or contains_mojibake(current) or len(incoming) > len(current):
                 setattr(self, attr, incoming)
         if other.url:
             self.url = other.url
@@ -105,6 +108,28 @@ class Post:
 class FeedError(RuntimeError):
     pass
 
+
+
+
+def decode_html(content: bytes | str) -> str:
+    """Decode HTML without trusting an incorrect HTTP charset guess."""
+    if isinstance(content, str):
+        return content
+    try:
+        return content.decode("utf-8")
+    except UnicodeDecodeError:
+        decoded = UnicodeDammit(content, is_html=True).unicode_markup
+        if decoded is None:
+            raise FeedError("Unable to decode HTML response.")
+        return decoded
+
+
+def html_soup(content: bytes | str) -> BeautifulSoup:
+    return BeautifulSoup(decode_html(content), "html.parser")
+
+
+def contains_mojibake(value: str) -> bool:
+    return bool(value and MOJIBAKE_RE.search(value))
 
 def utc_now() -> datetime:
     return datetime.now(timezone.utc).replace(microsecond=0)
@@ -306,23 +331,42 @@ def parse_jsonld(soup: BeautifulSoup, base: str) -> list[Post]:
     return posts
 
 
-def nearest_card(link: Tag) -> Tag:
-    current: Tag = link
-    best = link
-    for _ in range(8):
+def heading_post_links(soup: BeautifulSoup, base: str) -> list[tuple[Tag, Tag, str]]:
+    """Return primary article heading links in visible listing order."""
+    results: list[tuple[Tag, Tag, str]] = []
+    seen: set[str] = set()
+    for heading in soup.find_all(["h1", "h2", "h3", "h4", "h5", "h6"]):
+        for link in heading.find_all("a", href=True):
+            url = canonicalise_url(str(link.get("href", "")), base)
+            if not is_post_url(url) or url in seen:
+                continue
+            seen.add(url)
+            results.append((heading, link, url))
+            break
+    return results
+
+
+def nearest_card(node: Tag, expected_url: str = "") -> Tag:
+    """Find the smallest dated ancestor that represents one listing item."""
+    current: Tag = node
+    best = node
+    for _ in range(10):
         parent = current.parent
-        if not isinstance(parent, Tag):
+        if not isinstance(parent, Tag) or parent.name in {"html", "body"}:
             break
         best = parent
         text = clean_text(parent.get_text(" ", strip=True))
         has_date = bool(DATE_LINE_RE.search(text))
-        post_links = {
-            canonicalise_url(str(a.get("href", "")), SOURCE_ORIGIN)
-            for a in parent.find_all("a", href=True)
-            if is_post_url(canonicalise_url(str(a.get("href", "")), SOURCE_ORIGIN))
-        }
-        if has_date and len(post_links) == 1:
-            return parent
+        if has_date:
+            if not expected_url:
+                return parent
+            heading_urls = {
+                canonicalise_url(str(a.get("href", "")), SOURCE_ORIGIN)
+                for heading in parent.find_all(["h1", "h2", "h3", "h4", "h5", "h6"])
+                for a in heading.find_all("a", href=True)
+            }
+            if expected_url in heading_urls:
+                return parent
         current = parent
     return best
 
@@ -384,42 +428,64 @@ def extract_excerpt(card: Tag, title: str, author: str, date_value: str) -> str:
     return max(paragraphs, key=len, default="")
 
 
+def post_from_listing_card(card: Tag, url: str, base: str, heading: Tag | None = None) -> Post:
+    author, date_value = extract_author_date(card)
+    title = clean_text(heading.get_text(" ", strip=True), 280) if heading else extract_title(card, url)
+    if not title:
+        title = extract_title(card, url)
+    image = ImageData()
+    for img in card.find_all("img"):
+        candidate = image_from_tag(img, base)
+        if candidate.url and image_score(candidate) > image_score(image):
+            image = candidate
+    tags: list[str] = []
+    for tag_link in card.find_all("a", href=True):
+        href = str(tag_link.get("href", ""))
+        if "/tag/" in href or "?tag=" in href:
+            tag = clean_text(tag_link.get_text(" ", strip=True), 80)
+            if tag:
+                tags.append(tag)
+    return Post(
+        title=title,
+        url=url,
+        author=author,
+        date=date_value,
+        excerpt=extract_excerpt(card, title, author, date_value),
+        image=image,
+        tags=tags,
+        method={"blog-listing"},
+    )
+
+
 def parse_listing_cards(soup: BeautifulSoup, base: str) -> list[Post]:
     by_url: dict[str, Post] = {}
-    for link in soup.find_all("a", href=True):
-        url = canonicalise_url(str(link.get("href", "")), base)
-        if not is_post_url(url):
-            continue
-        card = nearest_card(link)
-        author, date_value = extract_author_date(card)
-        title = extract_title(card, url)
-        image = ImageData()
-        for img in card.find_all("img"):
-            candidate = image_from_tag(img, base)
-            if candidate.url and image_score(candidate) > image_score(image):
-                image = candidate
-        tags = []
-        for tag_link in card.find_all("a", href=True):
-            href = str(tag_link.get("href", ""))
-            if "/tag/" in href or "?tag=" in href:
-                tag = clean_text(tag_link.get_text(" ", strip=True), 80)
-                if tag:
-                    tags.append(tag)
-        candidate = Post(
-            title=title,
-            url=url,
-            author=author,
-            date=date_value,
-            excerpt=extract_excerpt(card, title, author, date_value),
-            image=image,
-            tags=tags,
-            method={"blog-listing"},
-        )
+
+    # Primary path: use heading links, which remain unambiguous even when a card
+    # also links to a related series or another article.
+    for heading, link, url in heading_post_links(soup, base):
+        card = nearest_card(heading, url)
+        candidate = post_from_listing_card(card, url, base, heading)
         if url not in by_url:
             by_url[url] = candidate
         else:
             by_url[url].merge(candidate)
+
+    # Secondary path only when the page does not expose enough heading links.
+    # This avoids treating related-series links inside a valid card as articles.
+    if len(by_url) < MIN_POSTS:
+        for link in soup.find_all("a", href=True):
+            url = canonicalise_url(str(link.get("href", "")), base)
+            if not is_post_url(url) or url in by_url:
+                continue
+            card = nearest_card(link, url)
+            candidate = post_from_listing_card(card, url, base)
+            by_url[url] = candidate
+
     return list(by_url.values())
+
+
+def listing_order(soup: BeautifulSoup, base: str) -> list[str]:
+    return [url for _, _, url in heading_post_links(soup, base)]
 
 
 def discover_feed_urls(soup: BeautifulSoup, base: str) -> list[str]:
@@ -560,8 +626,8 @@ def meta_content(soup: BeautifulSoup, *keys: str) -> str:
     return ""
 
 
-def article_from_html(html: str, requested_url: str) -> Post:
-    soup = BeautifulSoup(html, "html.parser")
+def article_from_html(html: bytes | str, requested_url: str) -> Post:
+    soup = html_soup(html)
     json_posts = parse_jsonld(soup, requested_url)
     post = json_posts[0] if json_posts else Post(url=requested_url, method={"article-page"})
     post.method.add("article-page")
@@ -681,7 +747,7 @@ def enrich_image_dimensions(client: Client, image: ImageData) -> None:
 def discover_sitemaps(client: Client) -> list[str]:
     candidates = [f"{SOURCE_ORIGIN}/sitemap.xml", f"{SOURCE_ORIGIN}/sitemap-index.xml"]
     try:
-        robots = client.get(f"{SOURCE_ORIGIN}/robots.txt", max_bytes=512_000).text
+        robots = decode_html(client.get(f"{SOURCE_ORIGIN}/robots.txt", max_bytes=512_000).content)
         for line in robots.splitlines():
             if line.lower().startswith("sitemap:"):
                 candidates.append(line.split(":", 1)[1].strip())
@@ -703,7 +769,7 @@ def merge_posts(posts: Iterable[Post]) -> dict[str, Post]:
     return merged
 
 
-def validate_posts(posts: list[Post]) -> None:
+def validate_posts(posts: list[Post], expected_urls: list[str] | None = None) -> None:
     if len(posts) < MIN_POSTS:
         raise FeedError(f"Only {len(posts)} valid posts were found; at least {MIN_POSTS} are required.")
     seen: set[str] = set()
@@ -721,9 +787,17 @@ def validate_posts(posts: list[Post]) -> None:
             raise FeedError(f"Missing author for {post.url}")
         if post.image.url and GENERIC_IMAGE_RE.search(urlparse(post.image.url).path.lower()):
             raise FeedError(f"Generic image selected for {post.url}")
+        text_fields = [post.title, post.author, post.excerpt, post.image.alt, *post.tags]
+        if any(contains_mojibake(value) for value in text_fields):
+            raise FeedError(f"Broken character encoding detected for {post.url}")
     dates = [post.date for post in posts]
     if dates != sorted(dates, reverse=True):
         raise FeedError("Posts are not in reverse chronological order.")
+    if expected_urls:
+        expected = expected_urls[: min(MAX_POSTS, len(expected_urls))]
+        actual = [post.url for post in posts[: len(expected)]]
+        if actual != expected:
+            raise FeedError("Generated feed does not match the visible blog listing order.")
 
 
 def public_post_signature(posts: list[Post]) -> str:
@@ -770,7 +844,8 @@ def write_change_flag(changed: bool) -> None:
 def build_feed() -> tuple[list[Post], set[str]]:
     client = Client()
     listing_response = client.get(BLOG_URL, max_bytes=8_000_000)
-    listing_soup = BeautifulSoup(listing_response.text, "html.parser")
+    listing_soup = html_soup(listing_response.content)
+    expected_order = listing_order(listing_soup, listing_response.url)
 
     collected: list[Post] = []
     collected.extend(parse_jsonld(listing_soup, listing_response.url))
@@ -784,6 +859,12 @@ def build_feed() -> tuple[list[Post], set[str]]:
             continue
 
     merged = merge_posts(collected)
+
+    # Preserve every primary listing URL even if its card metadata was sparse.
+    # The article page can then supply the remaining fields.
+    for url in expected_order[: max(MAX_POSTS * 2, 12)]:
+        if url not in merged:
+            merged[url] = Post(url=url, method={"blog-listing"})
 
     if len(merged) < MIN_POSTS:
         sitemap_queue = discover_sitemaps(client)
@@ -801,31 +882,47 @@ def build_feed() -> tuple[list[Post], set[str]]:
             except Exception:
                 continue
 
-    # Enrich the most likely recent posts first. Listing and feed dates are used to
-    # avoid crawling the full archive.
-    candidates = sorted(merged.values(), key=lambda post: post.date or "", reverse=True)[: max(MAX_POSTS * 3, 12)]
+    # Enrich visible listing entries first, then any feed or sitemap fallbacks.
+    ordered_candidates = [merged[url] for url in expected_order if url in merged]
+    remainder = [post for url, post in merged.items() if url not in set(expected_order)]
+    remainder.sort(key=lambda post: (post.date or "", post.url), reverse=True)
+    candidates = (ordered_candidates + remainder)[: max(MAX_POSTS * 3, 12)]
+
     enriched: list[Post] = []
     for candidate in candidates:
         try:
             response = client.get(candidate.url, max_bytes=8_000_000)
-            article = article_from_html(response.text, response.url)
+            article = article_from_html(response.content, response.url)
             candidate.merge(article)
         except Exception as exc:
             print(f"Article enrichment failed for {candidate.url}: {exc}", file=sys.stderr)
         enriched.append(candidate)
 
-    valid_candidates = [post for post in enriched if post.title and post.date and post.author]
-    valid_candidates.sort(key=lambda post: (post.date, post.url), reverse=True)
-    selected = valid_candidates[:MAX_POSTS]
+    valid_by_url = {post.url: post for post in enriched if post.title and post.date and post.author}
+    selected: list[Post] = []
+    if expected_order:
+        expected_top = expected_order[: min(MAX_POSTS, len(expected_order))]
+        missing = [url for url in expected_top if url not in valid_by_url]
+        if missing:
+            raise FeedError("Could not validate all recent posts shown on the blog listing.")
+        selected.extend(valid_by_url[url] for url in expected_top)
+
+    if len(selected) < MAX_POSTS:
+        fallback = [post for post in valid_by_url.values() if post.url not in {item.url for item in selected}]
+        fallback.sort(key=lambda post: (post.date, post.url), reverse=True)
+        selected.extend(fallback[: MAX_POSTS - len(selected)])
 
     for post in selected:
         post.excerpt = clean_text(post.excerpt, 420)
+        post.tags = [tag for tag in post.tags if not contains_mojibake(tag)]
+        if contains_mojibake(post.image.alt):
+            post.image.alt = ""
         if post.image.url:
             enrich_image_dimensions(client, post.image)
         if not post.image.alt:
             post.image.alt = post.author or post.title
 
-    validate_posts(selected)
+    validate_posts(selected, expected_order)
     methods: set[str] = set()
     for post in selected:
         methods.update(post.method)
