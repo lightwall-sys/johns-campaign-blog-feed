@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "source": {
+    "name": "John's Campaign",
+    "blog_url": "https://johnscampaign.org.uk/blog/"
+  },
+  "generated_at": "2026-07-21T09:00:14+01:00",
+  "last_successful_update": "2026-07-21T09:00:14+01:00",
+  "post_count": 3,
+  "posts": [
+    {
+      "title": "Forced into a Care Home: This Could Have Been Me",
+      "url": "https://johnscampaign.org.uk/post/forced-into-a-care-home/",
+      "author": "Sarah Rose",
+      "date": "2026-07-19",
+      "excerpt": "Sarah Rose writes about independent living, support from carers and her fear that both could be taken away from people with complex disabilities.",
+      "image": {
+        "url": "https://johnscampaign.org.uk/images/posts/sarah-rose-2.jpg",
+        "alt": "Sarah Rose",
+        "width": 397,
+        "height": 443
+      },
+      "tags": []
+    },
+    {
+      "title": "Hearing Patient and Carer Voices, Part 1 — From Visiting to Presence: Why ‘Partners in Care’ Must Be the Future",
+      "url": "https://johnscampaign.org.uk/post/hearing-patient-and-carer-voices-1/",
+      "author": "Garry Perry",
+      "date": "2026-06-16",
+      "excerpt": "Garry Perry describes why lived experience and co-design should shape care across the Royal Wolverhampton and Walsall NHS trusts.",
+      "image": {
+        "url": "https://johnscampaign.org.uk/images/posts/garry-perry.jpg",
+        "alt": "Garry Perry",
+        "width": 1024,
+        "height": 1536
+      },
+      "tags": []
+    },
+    {
+      "title": "Hearing Patient and Carer Voices, Part 2 — Recognising Carers: Making ‘Partners in Care’ Real Every Day",
+      "url": "https://johnscampaign.org.uk/post/hearing-patient-and-carer-voices-2/",
+      "author": "Zoe Christoffersen",
+      "date": "2026-06-16",
+      "excerpt": "Zoe Christoffersen explains how recognising carers as partners can become part of everyday practice.",
+      "image": {
+        "url": "https://johnscampaign.org.uk/images/posts/zoe-christoffersen.png",
+        "alt": "Zoe Christoffersen",
+        "width": 946,
+        "height": 1368
+      },
+      "tags": []
+    }
+  ]
+}

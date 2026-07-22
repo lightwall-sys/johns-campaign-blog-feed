@@ -1,0 +1,8 @@
+{
+  "ok": true,
+  "stale": false,
+  "checked_at": "2026-07-21T09:00:14+01:00",
+  "last_successful_update": "2026-07-21T09:00:14+01:00",
+  "post_count": 3,
+  "message": "Seed data. Run the workflow to refresh from the source."
+}

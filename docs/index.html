@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>John's Campaign blog feed</title>
+  <style>
+    body { max-width: 48rem; margin: 3rem auto; padding: 0 1rem; font: 16px/1.55 system-ui, sans-serif; color: #1f2933; }
+    h1 { font-size: 1.5rem; }
+    code { background: #f1f3f5; padding: 0.1rem 0.3rem; }
+  </style>
+</head>
+<body>
+  <h1>John's Campaign blog feed</h1>
+  <p>Machine-readable metadata from the official <a href="https://johnscampaign.org.uk/blog/">John's Campaign blog</a>.</p>
+  <p><a href="feed.json"><code>feed.json</code></a> · <a href="status.json"><code>status.json</code></a></p>
+  <p id="status">Checking status…</p>
+  <script>
+    fetch('status.json', { cache: 'no-store' })
+      .then(function (response) { if (!response.ok) throw new Error(); return response.json(); })
+      .then(function (data) {
+        var state = data.ok ? 'Current' : 'Last valid feed retained';
+        var time = data.last_successful_update || data.checked_at || 'unknown';
+        document.getElementById('status').textContent = state + '. Last successful update: ' + time + '.';
+      })
+      .catch(function () { document.getElementById('status').textContent = 'Status unavailable.'; });
+  </script>
+</body>
+</html>
