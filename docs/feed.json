@@ -4,10 +4,24 @@
     "name": "John's Campaign",
     "blog_url": "https://johnscampaign.org.uk/blog/"
   },
-  "generated_at": "2026-08-01T21:35:02Z",
-  "last_successful_update": "2026-08-01T21:35:02Z",
+  "generated_at": "2026-08-28T11:31:19Z",
+  "last_successful_update": "2026-08-28T11:31:19Z",
   "post_count": 6,
   "posts": [
+    {
+      "title": "Susan’s Story: The Experience of Caring for My Mum with Autoimmune Encephalitis, Epilepsy and Mental Illness",
+      "url": "https://johnscampaign.org.uk/post/susans-story/",
+      "author": "Sara Servio",
+      "date": "2026-08-28",
+      "excerpt": "Sara Servio B.A.(hons), MED, PGCE – “a very tired and frustrated carer who has had to fight the system whilst going through it” – shares her mother's ongoing care:",
+      "image": {
+        "url": "https://johnscampaign.org.uk/images/posts/sara-servio.jpg",
+        "alt": "Sara Servio",
+        "width": 1200,
+        "height": 1600
+      },
+      "tags": []
+    },
     {
       "title": "Forced into a Care Home: This Could Have Been Me",
       "url": "https://johnscampaign.org.uk/post/forced-into-a-care-home/",
@@ -75,20 +89,6 @@
         "alt": "Royal Wolverhampton NHS Trust and Walsall Healthcare NHS Trust",
         "width": 482,
         "height": 300
-      },
-      "tags": []
-    },
-    {
-      "title": "“If You Can’t Help Your Own, Who Can You Help”",
-      "url": "https://johnscampaign.org.uk/post/if-you-cant-help-your-own-who-can-you-help/",
-      "author": "Jessica Hayes",
-      "date": "2026-06-10",
-      "excerpt": "Jessica Hayes is a student occupational therapist at Teesside University. She discovered John's Campaign while supporting her beloved Nana in the last days of her life. Jessica recently became a John's Campaign ambassador. Here she tells us about her Nana, and why the campaign matters to her:",
-      "image": {
-        "url": "https://johnscampaign.org.uk/images/posts/lillian-burton.png",
-        "alt": "Jessica Hayes",
-        "width": 428,
-        "height": 444
       },
       "tags": []
     }
