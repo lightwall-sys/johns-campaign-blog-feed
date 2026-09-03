@@ -4,10 +4,24 @@
     "name": "John's Campaign",
     "blog_url": "https://johnscampaign.org.uk/blog/"
   },
-  "generated_at": "2026-09-01T21:08:12Z",
-  "last_successful_update": "2026-09-01T21:08:12Z",
+  "generated_at": "2026-09-03T16:32:13Z",
+  "last_successful_update": "2026-09-03T16:32:13Z",
   "post_count": 6,
   "posts": [
+    {
+      "title": "Why the Isle of Man is Joining John's Campaign",
+      "url": "https://johnscampaign.org.uk/post/why-the-iom-is-joining-jc/",
+      "author": "Rachel Taylor",
+      "date": "2026-09-03",
+      "excerpt": "Rachel Taylor , Senior Sister at Noble's Hospital on the Isle of Man, shares the story so far of their John's Campaign journey:",
+      "image": {
+        "url": "https://johnscampaign.org.uk/images/posts/rachel-taylor.jpg",
+        "alt": "Rachel Taylor",
+        "width": 1080,
+        "height": 1920
+      },
+      "tags": []
+    },
     {
       "title": "Susan’s Story: The Experience of Caring for My Mum with Autoimmune Encephalitis, Epilepsy and Mental Illness",
       "url": "https://johnscampaign.org.uk/post/susans-story/",
@@ -75,20 +89,6 @@
         "alt": "Andrew Rice",
         "width": 348,
         "height": 348
-      },
-      "tags": []
-    },
-    {
-      "title": "Hearing Patient and Carer Voices",
-      "url": "https://johnscampaign.org.uk/post/hearing-patient-and-carer-voices/",
-      "author": "Royal Wolverhampton NHS Trust and Walsall Healthcare NHS Trust",
-      "date": "2026-06-16",
-      "excerpt": "The Royal Wolverhampton NHS Trust and Walsall Healthcare NHS Trust are making great progress developing the Partners-in-Care ethos as well as refreshing their John's Campaign pledges (see video) . Here they present a three-part series of pieces giving 'what's, 'why's and 'how's about the changes they're making:",
-      "image": {
-        "url": "https://johnscampaign.org.uk/images/posts/royal-wolverhampton-and-walsall-nhs-trusts.png",
-        "alt": "Royal Wolverhampton NHS Trust and Walsall Healthcare NHS Trust",
-        "width": 482,
-        "height": 300
       },
       "tags": []
     }
