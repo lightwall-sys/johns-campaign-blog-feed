@@ -4,10 +4,19 @@
     "name": "John's Campaign",
     "blog_url": "https://johnscampaign.org.uk/blog/"
   },
-  "generated_at": "2026-09-03T16:32:13Z",
-  "last_successful_update": "2026-09-03T16:32:13Z",
+  "generated_at": "2026-09-23T04:53:04Z",
+  "last_successful_update": "2026-09-23T04:53:04Z",
   "post_count": 6,
   "posts": [
+    {
+      "title": "Poor care of elderly patients - a scandal in plain sight?",
+      "url": "https://johnscampaign.org.uk/post/poor-care-of-elderly-patients-a-scandal-in-plain-sight/",
+      "author": "Diarmuid Brannick",
+      "date": "2026-09-23",
+      "excerpt": "Diarmuid Brannick reflects on the criticism he received when drawing attention to poor care on a ward where he was struggling to be allowed to support his mother. He believes that poor care of elderly patients is a scandal in plain sight:",
+      "image": null,
+      "tags": []
+    },
     {
       "title": "Why the Isle of Man is Joining John's Campaign",
       "url": "https://johnscampaign.org.uk/post/why-the-iom-is-joining-jc/",
@@ -75,20 +84,6 @@
         "alt": "Zoe Christoffersen",
         "width": 946,
         "height": 1368
-      },
-      "tags": []
-    },
-    {
-      "title": "Hearing Patient and Carer Voices, Part 3",
-      "url": "https://johnscampaign.org.uk/post/hearing-patient-and-carer-voices-3/",
-      "author": "Andrew Rice",
-      "date": "2026-06-16",
-      "excerpt": "(This is part of our Hearing Patient and Carer Voices series from Royal Wolverhampton NHS Trust and Walsall Healthcare NHS Trust.) Andrew Rice is Head of Patient Voice across Walsall Healthcare NHS Trust and The Royal Wolverhampton NHS Trust. His work focuses on ensuring that patients, families, and carers are not only heard, but actively shape how care is delivered and improved. He is a strong advocate for…",
-      "image": {
-        "url": "https://johnscampaign.org.uk/images/posts/andrew-rice.png",
-        "alt": "Andrew Rice",
-        "width": 348,
-        "height": 348
       },
       "tags": []
     }
