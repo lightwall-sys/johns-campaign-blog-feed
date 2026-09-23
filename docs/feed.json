@@ -4,17 +4,31 @@
     "name": "John's Campaign",
     "blog_url": "https://johnscampaign.org.uk/blog/"
   },
-  "generated_at": "2026-09-23T04:53:04Z",
-  "last_successful_update": "2026-09-23T04:53:04Z",
+  "generated_at": "2026-09-23T11:49:42Z",
+  "last_successful_update": "2026-09-23T11:49:42Z",
   "post_count": 6,
   "posts": [
     {
-      "title": "Poor care of elderly patients - a scandal in plain sight?",
+      "title": "Poor Care of Elderly Patients: A Scandal in Plain Sight?",
       "url": "https://johnscampaign.org.uk/post/poor-care-of-elderly-patients-a-scandal-in-plain-sight/",
       "author": "Diarmuid Brannick",
       "date": "2026-09-23",
       "excerpt": "Diarmuid Brannick reflects on the criticism he received when drawing attention to poor care on a ward where he was struggling to be allowed to support his mother. He believes that poor care of elderly patients is a scandal in plain sight:",
       "image": null,
+      "tags": []
+    },
+    {
+      "title": "The Sticker on the Wall - Ella's Story",
+      "url": "https://johnscampaign.org.uk/post/the-sticker-on-the-wall-ellas-story/",
+      "author": "Clair Walton",
+      "date": "2026-09-23",
+      "excerpt": "Clair Walton explains what small gaps in understanding and familiar care can mean to a 98 year old former nurse now living with dementia:",
+      "image": {
+        "url": "https://johnscampaign.org.uk/images/posts/clair-and-ella.jpg",
+        "alt": "Clair Walton",
+        "width": 1179,
+        "height": 1421
+      },
       "tags": []
     },
     {
@@ -70,20 +84,6 @@
         "alt": "Garry Perry",
         "width": 1024,
         "height": 1536
-      },
-      "tags": []
-    },
-    {
-      "title": "Hearing Patient and Carer Voices, Part 2 — Recognising Carers: Making “Partners in Care” Real Every Day",
-      "url": "https://johnscampaign.org.uk/post/hearing-patient-and-carer-voices-2/",
-      "author": "Zoe Christoffersen",
-      "date": "2026-06-16",
-      "excerpt": "(This is part of our Hearing Patient and Carer Voices series from Royal Wolverhampton NHS Trust and Walsall Healthcare NHS Trust.) Zoe Christoffersen is a Family & Carers’ Support Officer at Walsall Healthcare NHS Trust.",
-      "image": {
-        "url": "https://johnscampaign.org.uk/images/posts/zoe-christoffersen.png",
-        "alt": "Zoe Christoffersen",
-        "width": 946,
-        "height": 1368
       },
       "tags": []
     }
