@@ -4,10 +4,24 @@
     "name": "John's Campaign",
     "blog_url": "https://johnscampaign.org.uk/blog/"
   },
-  "generated_at": "2026-10-01T06:08:04Z",
-  "last_successful_update": "2026-10-01T06:08:04Z",
+  "generated_at": "2026-10-01T13:30:50Z",
+  "last_successful_update": "2026-10-01T13:30:50Z",
   "post_count": 6,
   "posts": [
+    {
+      "title": "Good Care Starts with Psychological Safety",
+      "url": "https://johnscampaign.org.uk/post/good-care-starts-with-psychological-safety/",
+      "author": "Sonia Blake",
+      "date": "2026-10-01",
+      "excerpt": "John's Campaign Ambassador Sonia Blake was inspired to create a simple About Me form after observing her own mother's distress in hospital:",
+      "image": {
+        "url": "https://johnscampaign.org.uk/images/posts/sonia-blake.jpg",
+        "alt": "Sonia Blake",
+        "width": 828,
+        "height": 655
+      },
+      "tags": []
+    },
     {
       "title": "Poor Care of Elderly Patients: A Scandal in Plain Sight?",
       "url": "https://johnscampaign.org.uk/post/poor-care-of-elderly-patients-a-scandal-in-plain-sight/",
@@ -70,20 +84,6 @@
         "alt": "Sarah Rose",
         "width": 397,
         "height": 443
-      },
-      "tags": []
-    },
-    {
-      "title": "Hearing Patient and Carer Voices, Part 1 — From Visiting to Presence: Why “Partners in Care” Must Be the Future",
-      "url": "https://johnscampaign.org.uk/post/hearing-patient-and-carer-voices-1/",
-      "author": "Garry Perry",
-      "date": "2026-06-16",
-      "excerpt": "(This is part of our Hearing Patient and Carer Voices series from Royal Wolverhampton NHS Trust and Walsall Healthcare NHS Trust.) Garry Perry is a leading voice in patient experience and co-design across The Royal Wolverhampton NHS Trust and Walsall Healthcare NHS Trust. Creator of the award-winning Little Voices programme, he champions approaches that put lived experience at the heart of improvement, shaping work…",
-      "image": {
-        "url": "https://johnscampaign.org.uk/images/posts/garry-perry.jpg",
-        "alt": "Garry Perry",
-        "width": 1024,
-        "height": 1536
       },
       "tags": []
     }
