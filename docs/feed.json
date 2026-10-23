@@ -4,10 +4,24 @@
     "name": "John's Campaign",
     "blog_url": "https://johnscampaign.org.uk/blog/"
   },
-  "generated_at": "2026-10-01T22:46:23Z",
-  "last_successful_update": "2026-10-01T22:46:23Z",
+  "generated_at": "2026-10-23T17:16:35Z",
+  "last_successful_update": "2026-10-23T17:16:35Z",
   "post_count": 6,
   "posts": [
+    {
+      "title": "John’s Campaign, Care Rights UK and the Patients Association Respond to Covid Inquiry Module 6 Report",
+      "url": "https://johnscampaign.org.uk/post/jc-care-rights-uk-and-the-patients-association-respond-to-covid-inquiry-module-6-report/",
+      "author": "Leigh Day",
+      "date": "2026-10-23",
+      "excerpt": "John's Campaign has been a core participant in modules 2b, 3 and 6 of the UK COVID-19 Inquiry. The pandemic affected everyone and we admire Baroness Hallett's dedication to investigating what happened and what should - and could - have been managed so much better and with more human understanding. Now we need action and we are grateful to Lord Hunt of King's Heath and others for bringing forward the right for people…",
+      "image": {
+        "url": "https://johnscampaign.org.uk/images/posts/leigh-day.jpg",
+        "alt": "Leigh Day",
+        "width": 400,
+        "height": 400
+      },
+      "tags": []
+    },
     {
       "title": "Good Care Starts with Psychological Safety",
       "url": "https://johnscampaign.org.uk/post/good-care-starts-with-psychological-safety/",
@@ -70,20 +84,6 @@
         "alt": "Sara Servio",
         "width": 1200,
         "height": 1600
-      },
-      "tags": []
-    },
-    {
-      "title": "Forced into a Care Home: This Could Have Been Me",
-      "url": "https://johnscampaign.org.uk/post/forced-into-a-care-home/",
-      "author": "Sarah Rose",
-      "date": "2026-07-19",
-      "excerpt": "This post first appeared on the blog of the Pathfinders Neuromuscular Alliance — in it, Sarah Rose, their Chair of Trustees, writes about the importance of independent living and support from carers, and her fear that this could be taken away from her and others with complex disabilities:",
-      "image": {
-        "url": "https://johnscampaign.org.uk/images/posts/sarah-rose-2.jpg",
-        "alt": "Sarah Rose",
-        "width": 397,
-        "height": 443
       },
       "tags": []
     }
