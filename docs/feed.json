@@ -4,10 +4,19 @@
     "name": "John's Campaign",
     "blog_url": "https://johnscampaign.org.uk/blog/"
   },
-  "generated_at": "2026-10-23T17:16:35Z",
-  "last_successful_update": "2026-10-23T17:16:35Z",
+  "generated_at": "2026-10-30T13:10:36Z",
+  "last_successful_update": "2026-10-30T13:10:36Z",
   "post_count": 6,
   "posts": [
+    {
+      "title": "An Open Letter to Baroness Merron",
+      "url": "https://johnscampaign.org.uk/post/an-open-letter-to-baroness-merron/",
+      "author": "Julia Jones and Nicci Gerrard",
+      "date": "2026-10-30",
+      "excerpt": "There were 19 peers present when amendments relating to Health and Care partners were introduced on Wednesday evening. Baroness Merron, the Government minister overseeing the Bill was there. This is what we would have liked to have said to her:",
+      "image": null,
+      "tags": []
+    },
     {
       "title": "John’s Campaign, Care Rights UK and the Patients Association Respond to Covid Inquiry Module 6 Report",
       "url": "https://johnscampaign.org.uk/post/jc-care-rights-uk-and-the-patients-association-respond-to-covid-inquiry-module-6-report/",
@@ -70,20 +79,6 @@
         "alt": "Rachel Taylor",
         "width": 1080,
         "height": 1920
-      },
-      "tags": []
-    },
-    {
-      "title": "Susan’s Story: The Experience of Caring for My Mum with Autoimmune Encephalitis, Epilepsy and Mental Illness",
-      "url": "https://johnscampaign.org.uk/post/susans-story/",
-      "author": "Sara Servio",
-      "date": "2026-08-28",
-      "excerpt": "Sara Servio B.A.(hons), MED, PGCE – “a very tired and frustrated carer who has had to fight the system whilst going through it” – shares her mother's ongoing care:",
-      "image": {
-        "url": "https://johnscampaign.org.uk/images/posts/sara-servio.jpg",
-        "alt": "Sara Servio",
-        "width": 1200,
-        "height": 1600
       },
       "tags": []
     }
